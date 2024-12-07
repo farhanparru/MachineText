@@ -1,6 +1,6 @@
 require('dotenv').config();
-require('../Backend/Db/Database')
-const userRouter = require('./router/userRouter')
+require('../Db/Database')
+const userRouter = require('../router/userRouter')
 const express = require('express')
 const cors = require('cors')
 const bodyParser = require("body-parser");
