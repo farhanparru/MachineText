@@ -13,7 +13,7 @@ module.exports = {
 
       res.status(201).json({
         message: "Successfully created menu",
-        menus:createmenu,
+        createmenu,
       });
     } catch (error) {
       res
@@ -56,7 +56,7 @@ module.exports = {
       const getAllmenuItesm =  await MenuItem.find({menuId: req.params.menuId})
       res
       .status(200)
-      .json({ message: "Successfully get All Itesmmenus", menusitens:getAllmenuItesm });
+      .json({ message: "Successfully get All Itesmmenus", getAllmenuItesm });
     } catch (error) {
       res
       .status(500)
