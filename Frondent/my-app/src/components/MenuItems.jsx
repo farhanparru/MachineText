@@ -21,7 +21,7 @@ const MenuItems = () => {
     const fetchMenuItems = async () => {
       try {
         const response = await axios.get(
-          `https://machine-text-api.vercel.app/api/users/menus/${menuId}/items`
+          `https://machine-backend-api.vercel.app/api/users/menus/${menuId}/items`
         );
         setMenuItems(response.data.getAllmenuItesm); 
       } catch (error) {
@@ -38,7 +38,7 @@ const MenuItems = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `https://machine-text-api.vercel.app/api/users/menus/${menuId}/items`,
+        `https://machine-backend-api.vercel.app/api/users/menus/${menuId}/items`,
         newItem
       );
       setMenuItems([...menuItems, response.data]); 
