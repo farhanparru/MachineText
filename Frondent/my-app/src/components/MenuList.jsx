@@ -17,6 +17,7 @@ const MenuList = () => {
   const navigate = useNavigate();
 
   const fetchMenus = async () => {
+    axios.defaults.withCredentials = true;
     try {
       const response = await axios.get(
         "https://machine-backend-api.vercel.app/api/users/getMenu"
@@ -32,6 +33,7 @@ const MenuList = () => {
   }, []);
 
   const handleAddMenu = async () => {
+    axios.defaults.withCredentials = true;
     try {
       const response = await axios.post(
         "https://machine-backend-api.vercel.app/api/users/createMenu",

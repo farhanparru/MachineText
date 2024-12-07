@@ -9,7 +9,7 @@ const PORT = 5000
 
 
 app.use(cors({
-    origin: "https://machine-frondent.vercel.app", 
+    origin: ["https://machine-frondent.vercel.app"], 
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE"], 
     credentials: true,
     
